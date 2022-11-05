@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>UI_Automation</artifactId>
+    <artifactId>TransferMateTask</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -13,4 +13,91 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <parallel>methods</parallel>
+
+                    <threadCount>4</threadCount>
+                    <testFailureIgnore>true</testFailureIgnore>
+                    <includes>
+                        <include>**/CukesRunner*.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.5.0</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.2.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.3.4</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.3.4</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>me.jvt.cucumber</groupId>
+            <artifactId>reporting-plugin</artifactId>
+            <version>7.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>5.1.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.12.4</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.4.0</version>
+        </dependency>
+
+
+    </dependencies>
 </project>
