@@ -1,7 +1,7 @@
 Feature:Testing Wikipedia search function
 
  # (Here we have 2 automation cases. First one is positive test (happy path).
- # I searches some keywords and verifies the results includes the keyword)
+ # It searches some keywords and verifies the results includes the keyword)
 
   Background:
     Given User navigates to search page
