@@ -8,6 +8,7 @@ import utilities.Driver;
 
 public class Hooks {
 
+    //After executing the test case it closes the driver and if scenario fails it saves a screenshot of the related page in the report
     @After
     public void teardownScenario(Scenario scenario) {
 

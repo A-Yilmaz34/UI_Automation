@@ -1,8 +1,8 @@
 Feature:Testing Wikipedia search function
 
  # (Here we have 2 automation cases. First one is positive test (happy path).
- # It searches some keywords and verifies if at least %75 of the results include the keyword)
- # Second case verifies that providing nothing as an input refreshes the page
+ # TC1 searches some keywords and verifies if at least %90 of the results include the keyword) (both titles and text bodies)
+ # Second case verifies that providing nothing as an input refreshes the page. This is an example of negative test.
 
   Background:
     Given User navigates to search page
